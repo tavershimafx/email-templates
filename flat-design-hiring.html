@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="x-disable-message-reformatting"/>
+    <title></title>
+
+    <!--Image source/ design inspiration-->
+    <!--https://www.freepik.com/free-psd/flat-design-we-are-hiring-template_32458315.htm#from_view=detail_serie-->
+    
+    <!--[if mso]>
+    <noscript>
+        <xml>
+            <o:OfficeDocumentSettings>
+                <o:PixelsPerInch>96 </o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+    </noscript>
+    <![endif]-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Montserrat";
+            word-break:keep-all;
+            white-space: wrap;
+        }
+
+        p{
+            color: #000;
+            line-height: 1;
+        }
+
+        .pr-20{
+            padding-right: 20px;
+        }
+        .email-template{
+            display: flex;
+            justify-content: center;
+            background: #ffe836;
+        }
+
+        .email-template > .content{
+            position: relative;
+            width: 600px; 
+            overflow: hidden;
+            background: #f6f6f6;
+            box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08);
+            margin-bottom: 20px;
+        }
+        
+       .close-date{
+            position: absolute;
+            right: -30px;
+            top: -50px;
+            height: 200px; 
+            width: 200px; 
+            border-radius: 100%; 
+            background-color: #fae12d;
+       }
+       .close-date .date-content{
+            position: relative;
+            margin-top: 70px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+       }
+       
+       .close-date .last{
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+       }
+       .close-date .day{
+            font-size: 32px;
+            font-weight: bold;
+       }
+       .close-date .day sup{
+            font-size: 14px;
+       }
+       .close-date .month{
+            font-size: 32px;
+            font-weight: bold;
+       }
+
+       .bubble-content{
+        position: relative;
+        width: max-content;
+        padding: 20px;
+       }
+       .bubble-content .small-bubble, .small-bubble{
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+        background: #ffe131;
+       }
+       
+       .bubble-content .large-bubble{
+        position: absolute;
+        bottom: -20px;
+        right: -20px;
+        height: 120px;
+        width: 120px;
+        border-radius: 100%;
+        background: #ffe031d2;
+        z-index: 10;
+       }
+       .bubble-content .img-container{
+        height: 300px;
+        width: 300px;
+        overflow: hidden;
+        border-radius: 100%;
+        background: #dfdfdf;
+       }
+       .bubble-content .img-container img{
+         height: inherit;
+         filter: grayscale(1);
+       }
+
+       .hiring-content{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+       }
+       .hiring-content .open-positions{
+            padding: 20px;
+            position: relative;
+       }
+
+       .hiring-content .open-positions .v-boot{
+       
+       }
+
+       .hiring-content .open-positions p{
+         font-weight: bold;
+         text-transform: uppercase;
+         font-size: 16px;
+       }
+       .hiring-content .open-positions ul{
+         padding-left: 13px;
+       }
+       
+       .hiring-content .open-positions ul li{
+         padding: 4px 0;
+         font-size: 12px;
+         font-weight: bold;
+         text-transform: uppercase;
+       }
+       .hiring-label{
+        text-align: right;
+        max-width: 320px;
+       }
+       .hiring-label .we{
+        font-size: 40px;
+       }
+       .hiring-label .lg{
+        font-size: 70px;
+        font-weight: 900;
+        line-height: 1.2;
+       }
+
+       .email-template > .content.style-2{
+            width: 400px; 
+            padding-bottom: 30px;
+        }
+       .close-date.md{
+            top: -50px;
+            height: 150px; 
+            width: 150px; 
+       }
+       .bubble-content.md{
+        padding: 0;
+        margin-top: 100px;
+       }
+       .bubble-content.md .large-bubble{
+        bottom: -30px;
+        right: -30px;
+        height: 120px;
+        width: 120px;
+       }
+       .close-date.md .last{
+            font-size: 14px;
+       }
+       .close-date.md .day{
+            font-size: 24px;
+       }
+       .close-date.md .day sup{
+            font-size: 12px;
+       }
+       .close-date.md .month{
+            font-size: 24px;
+       }
+       .center-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+       }
+
+       .medium-hiring{
+        text-align: center;
+       }
+       .medium-hiring .we{
+        font-size: 50px;
+       }
+       .medium-hiring .lg{
+        font-size: 80px;
+        font-weight: 900;
+        line-height: 1.2;
+       }
+       .medium-hiring .intern{
+        font-size: 16px;
+        font-weight: bold;
+       }
+       .center-padding{
+        padding: 30px 30px 0 30px;
+       }
+       .ml-40{
+        margin-left: 40px;
+       }
+       .relative-notes{
+        position: relative;
+       }
+       .relative-notes .small-bubble{
+        left: -10px;
+        top: -20px;
+       }
+       .relative-notes .notes{
+        font-size: 12px;
+        white-space: wrap;
+        padding: 0px 30px 30px 30px;
+       }
+       .hiring-label .notes{
+        font-size: 10px;
+        white-space: wrap;
+       }
+
+       .apply-now{
+        padding: 10px 10px;
+        font-size: 12px;
+        background: #fae12d;
+        text-align: left;
+       }
+       .apply-now span{
+        font-weight: bold;
+       }
+       .opening-label{
+        margin-top: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+       }
+       .flex-between{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 30px 30px 30px;
+       }
+       .flex-between p{
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 12px;
+       }
+    </style>
+</head>
+<body style="margin: 0;padding: 0;">
+    <!--[if mso]>
+    <table role="presentation" style="width: 100%;border-collapse: collapse; border: 0;border-spacing: 0;background: #fff;">
+        <tr>
+            <td align="center" style="padding: 0;">
+    <![endif]-->
+    <div class="email-template">
+       <div class="content">
+            <div class="close-date">
+               <div class="date-content">
+                    <p class="last">LAST DATE</p>
+                    <p class="day">10<sup>th</sup></p>
+                    <p class="month">Nov</p>
+               </div>
+            </div>
+            <div class="bubble-content">
+                <div class="small-bubble"></div>
+                <div class="large-bubble"></div>
+                <div class="img-container">
+                    <img src="./images/istockphoto-team.jpg" alt="">
+                </div>
+            </div>
+             <!--[if mso]>
+            <table role="presentation" style="width: 100%;border-collapse: collapse; border: 0;border-spacing: 0;background: #fff;">
+                <tr>
+                    <td align="center" style="padding: 0;">
+            <![endif]-->
+                <div class="hiring-content">
+                    <!--[if mso]>
+                    <td style="padding:0; margin: 0; vertical-align: top; align: left; cellpadding: 0; cellspacing: 0;">
+                    <![endif]-->
+                    <div class="open-positions">
+                        <p>FOR THE POSITIONS:</p>
+                        <br>
+                        <ul>
+                            <li>Graphic Designer</li>
+                            <li>Marketing Staff</li>
+                            <li>Mobile App Developer</li>
+                        </ul>
+                    </div>
+                     <!--[if mso]>
+                     </td>
+                    <![endif]-->
+
+                     <!--[if mso]>
+                    <td style="padding:0; margin: 0; vertical-align: top; align: right; cellpadding: 0; cellspacing: 0;">
+                    <![endif]-->
+                    <div class="hiring-label">
+                        <div class="pr-20">
+                            <p class="md">We Are</p>
+                            <p class="lg">HIRING</p>
+                            <p class="notes">Lorem Ipsum dolor sit amet conseceteiur Lorem Ipsum dolor sit amet conseceteiur tempor incid</p>
+                            
+                        </div>
+                        <div class="apply-now">
+                            <span>Apply Now: </span>Lorem Ipsum dolormconseceteiur 
+                        </div>
+                    </div>
+                     <!--[if mso]>
+                     </td>
+                    <![endif]-->
+                </div>
+                    <!--[if mso]>
+                    </td>
+                </tr>
+            </table>
+            <![endif]-->
+       </div>
+    </div>     
+    <!--[if mso]>
+            </td>
+        </tr>
+    </table>
+    <![endif]-->
+
+
+
+
+    <!--style two-->
+    <!--[if mso]>
+    <table role="presentation" style="width: 100%;border-collapse: collapse; border: 0;border-spacing: 0;background: #fff;">
+        <tr>
+            <td align="center" style="padding: 0;">
+    <![endif]-->
+    <div class="email-template">
+        <div class="content style-2">
+            <div class="close-date md">
+                <div class="date-content">
+                        <p class="last">LAST DATE</p>
+                        <p class="day">10<sup>th</sup></p>
+                        <p class="month">Nov</p>
+                </div>
+            </div>
+            <div class="center-content p-30">
+                <div class="bubble-content md">
+                    <div class="small-bubble"></div>
+                    <div class="large-bubble"></div>
+                    <div class="img-container">
+                        <img src="./images/istockphoto-team.jpg" alt="">
+                    </div>
+                </div>
+                <div class="medium-hiring">
+                    <p class="we">We Are</p>
+                    <p class="lg">HIRING</p>
+                </div>
+            </div>
+            <div class="center-content">
+                <div class="medium-hiring">
+                    <div class="relative-notes">
+                        <div class="small-bubble"></div>
+                        <p class="notes">Lorem Ipsum dolor sit amet conseceteiur Lorem Ipsum dolor sit amet conseceteiur tempor incid 
+                            dolor conseceteiur tempor incid
+                        </p>
+                
+                    </div>
+                </div>
+            </div>
+            <div class="apply-now ml-40">
+                <span>Apply Now: </span>Lorem Ipsum dolormconseceteiur 
+            </div>
+        </div>
+     </div>     
+     <!--[if mso]>
+             </td>
+         </tr>
+     </table>
+     <![endif]-->
+
+     
+
+
+
+    <!--style three-->
+    <!--[if mso]>
+    <table role="presentation" style="width: 100%;border-collapse: collapse; border: 0;border-spacing: 0;background: #fff;">
+        <tr>
+            <td align="center" style="padding: 0;">
+    <![endif]-->
+    <div class="email-template">
+        <div class="content style-2">
+           
+            <div class="center-content p-30">
+                <div class="medium-hiring">
+                    <p class="we">We Are</p>
+                    <p class="lg">HIRING</p>
+                    <p class="intern">WORK AS INTERNSHIP</p>
+                </div>
+                <div class="bubble-content">
+                    <div class="large-bubble"></div>
+                    <div class="img-container">
+                        <img src="./images/istockphoto-team.jpg" alt="">
+                    </div>
+                </div>
+                <p class="opening-label">FOR THE POSITIONS</p>
+            </div>
+            <div class="flex-between">
+               <p>FRONTEND DEVELOPER</p>
+               <p>Graphic Designer</p>
+            </div>
+            <div class="apply-now ml-40">
+                <span>Apply Now: </span>Lorem Ipsum dolormconseceteiur 
+            </div>
+        </div>
+     </div>     
+     <!--[if mso]>
+             </td>
+         </tr>
+     </table>
+     <![endif]-->
+</body>
+</html>
