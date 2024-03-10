@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="x-disable-message-reformatting" />
+    <title></title>
+
+    <!--Image source/ design inspiration-->
+    <!--https://www.freepik.com/free-vector/flat-black-friday-instagram-posts-collection_67225550.htm#from_view=detail_serie#position=3-->
+
+    <!--[if mso]>
+    <noscript>
+        <xml>
+            <o:OfficeDocumentSettings>
+                <o:PixelsPerInch>96 </o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+    </noscript>
+    <![endif]-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Prompt";
+            word-break: keep-all;
+            white-space: wrap;
+        }
+
+        p {
+            color: #000;
+            line-height: 1;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .email-template {
+            display: flex;
+            justify-content: center;
+            background: #ffe836;
+        }
+
+        .email-template>.content {
+            position: relative;
+            width: 460px;
+            height: 540px;
+            overflow: hidden;
+            background: #000;
+            box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08);
+            margin-bottom: 20px;
+        }
+
+        .top-section {}
+
+        .top-section .shoppers {
+            position: relative;
+        }
+
+        .top-section .shoppers .shopper-overlay {
+            position: absolute;
+            height: 320px;
+            width: 200px;
+            background: #fd0241;
+            margin-left: 20px;
+            border-radius: 150px 150px 150px 150px;
+            z-index: 1;
+        }
+
+        .top-section .shoppers .shopper-img-container {
+            position: relative;
+            height: 300px;
+            width: 200px;
+            border-radius: 0px 150px 150px 150px;
+            z-index: 100;
+            overflow: hidden;
+        }
+
+        .top-section .shoppers .shopper-img-container img{
+            height: inherit;
+        }
+
+        .off-tag {
+            position: absolute;
+            height: 120px;
+            width: 150px;
+            right: 40px;
+            background: #fd0241;
+            margin-left: 20px;
+            padding-top: 20px;
+            border-radius: 0px 0px 150px 150px;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .off-tag p {
+            font-size: 40px;
+            text-transform: uppercase;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .ad-content {
+            position: absolute;
+            right: 20px;
+            max-width: 250px;
+            margin-top: 200px;
+            text-align: right;
+            z-index: 3;
+        }
+
+        .ad-content .black {
+            font-size: 60px;
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .ad-content .friday {
+            font-size: 70px;
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .align-right, .align-right *{
+            position: relative;
+            text-align: right;
+        }
+        .ad-content .sale {
+            position: relative;
+            font-size: 30px;
+            font-weight: 500;
+            padding: 0 20px;
+            background: #fd0241;
+            color: #fff;
+            border-radius: 20px;
+            text-transform: uppercase;
+            text-align: right;
+            display: inline-block;
+        }
+
+        .ad-content .notes{
+            margin-top: 20px;
+            font-size: 12px;
+            color: #fff;
+            line-height: 1.5;
+        }
+
+        .ad-content .shop-now {
+            position: relative;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 8px 20px;
+            background: #fff;
+            color: #fd0241;
+            border-radius: 20px;
+            text-transform: uppercase;
+            text-align: right;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .shopping-date{
+            position: absolute;
+            bottom: 50px;
+            margin-left: 40px;
+        }
+        .shopping-date .day{
+            font-size: 20px;
+            color: #fff;
+        }
+        .shopping-date .day sup{
+            font-size: 12px;
+        }
+        .shopping-date .month{
+            font-size: 20px;
+            font-weight: 500;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body style="margin: 0;padding: 0;">
+    <!--[if mso]>
+    <table role="presentation" style="width: 100%;border-collapse: collapse; border: 0;border-spacing: 0;background: #fff;">
+        <tr>
+            <td align="center" style="padding: 0;">
+    <![endif]-->
+    <div class="email-template">
+        <div class="content">
+
+            <!--[if mso]>
+            <table role="presentation" style="width: 100%;border-collapse: collapse; border: 0;border-spacing: 0;background: #fff;">
+                <tr>
+                    <td align="center" style="padding: 0;">
+            <![endif]-->
+            <div class="top-section">
+                <div class="shoppers">
+                    <div class="shopper-overlay"></div>
+                    <div class="off-tag">
+                        <p>50% off</p>
+                    </div>
+                    <div class="ad-content">
+                        <p class="black">Black</p>
+                        <p class="friday relative">Friday</p>
+                        <p class="sale">sale</p>
+                        <p class="notes">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna
+                        </p>
+                        <p class="shop-now">Shop Now</p>
+                        
+                    </div>
+                    <div class="shopper-img-container"> 
+                        <img src="./images/young-adult-shopping.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="shopping-date">
+                <p class="day">24<sup>th</sup></p>
+                <p class="month">NOV</p>
+            </div>
+            <!--[if mso]>
+                    </td>
+                </tr>
+            </table>
+            <![endif]-->
+        </div>
+    </div>
+    <!--[if mso]>
+            </td>
+        </tr>
+    </table>
+    <![endif]-->
+
+</body>
+
+</html>
